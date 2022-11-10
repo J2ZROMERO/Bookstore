@@ -1,6 +1,22 @@
-import React from "react"
 import ReactDOM from "react-dom"
-
-const element = <h1>Hello from Create React App</h1>
-
-ReactDOM.render(element, document.getElementById("root"))
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Books from "./pages/Books";
+import Categories from "./pages/Categories";
+class App extends React.Component {
+    static showApp() {
+      const root = ReactDOM.createRoot(document.getElementById('root'));
+      root.render(
+        <React.StrictMode>
+          <Router>
+            <Routes>
+              <Route path="/" element={<Books />} />
+              <Route path="/categories" element={<Categories />} />
+            </Routes>
+          </Router>
+  
+        </React.StrictMode>
+      );
+    }}
+    
+App.showApp()
