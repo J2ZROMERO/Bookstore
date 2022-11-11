@@ -6,13 +6,9 @@ const Form = ()=>{
 
         <form className="form">
          <h1 className="addNbook">ADD NEW BOOK</h1>
-    <input type='text'></input>
-    <select id="cars" name="carlist" form="carform">
-  <option value="volvo">Volvo</option>
-  <option value="saab">Saab</option>
-  <option value="opel">Opel</option>
-  <option value="audi">Audi</option>
-</select>
+    <input type='text' className="inputBook" placeholder="Title"></input>
+    <input type='text' className="inputAuthor" placeholder="Author"></input>
+    
   <button className="addBook">ADD BOOK</button>
         </form>
     )

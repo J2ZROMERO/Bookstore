@@ -1,6 +1,7 @@
 @import '../generalstyles.css';
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
 .contentBook{
     background-color: red;
     width: 80%;
@@ -124,7 +125,7 @@
 }
 
 .percentageVal{
-    font-family: Montserrat;
+    font-family: 'Montserrat', sans-serif;
     font-size: 2rem;
     font-weight: normal;
     font-stretch: normal;
@@ -136,7 +137,7 @@
 .percentageText{
     opacity: 0.5;
 
-    font-family: 'Montserrat';
+  font-family: 'Montserrat', sans-serif;
   font-size: 0.875rem;
   font-weight: normal;
   font-stretch: normal;
@@ -144,10 +145,4 @@
   line-height: normal;
   letter-spacing: normal;
   color: var(--black-two);
-}
-.title{
-    font-size: 1.6em;
-    height: 100%;
-    display: flex;
-    align-items: center;
 }

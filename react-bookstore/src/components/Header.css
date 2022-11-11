@@ -14,9 +14,22 @@ list-style: none;
 display: flex;
 gap: 20%;
 padding: 0;
+align-items: center;
+width: 100%;
 }
-.childUl > *{
+[class^="child"] > *{
 text-decoration: none;
+color: black;
+}
+.child1 > a{
+    font-family: 'Montserrat', sans-serif;
+  font-size: 1.875rem;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #0290ff;
 }
 
 .bookCategories{

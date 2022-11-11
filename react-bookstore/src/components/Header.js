@@ -7,7 +7,6 @@ const Headerelem = () => {
 return (
     <>
     <header className='head'>
-        <h1 className="title">Bookstore CMS</h1>
         <Nav />
       <img src={user} width='30px' height='30px'/>
     </header>
