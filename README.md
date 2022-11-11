@@ -22,7 +22,7 @@ To get a local copy up and running follow these simple example steps.
 > You must have installed git in your local environment. [Git](https://git-scm.com/download/win)
 
 > If you just want to take a look quickly, make a fork and open the project in the web browser by adding ".dev" instead of ."com" in the repo link.
-- Example : https://github.dev/J2ZROMERO/Leader-board.git
+- Example : https://github.dev/J2ZROMERO/Bookstore/tree/structureReactProject
 
 > Install a text-editor you prefer. [Code editors](https://desarrolloweb.com/colecciones/editores-codigo).
 
@@ -30,7 +30,7 @@ To get a local copy up and running follow these simple example steps.
 
 ### copy link the repository.
 
-[clone this repo](https://github.com/J2ZROMERO/Leader-board.git)
+[clone this repo](https://github.com/J2ZROMERO/Bookstore/tree/structureReactProject)
 
 > Follow these steps to run the project ⚠️
 > step 1: execute in your terminal with the corresponding path "npm run build"
