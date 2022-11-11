@@ -1,10 +1,9 @@
 @import '../generalstyles.css';
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
-.contentBook{
-    background-color: red;
-    width: 80%;
+
+.contentBook {
+  width: 80%;
   height: 10.625rem;
   margin: 2.313rem 6.25rem 0;
   padding: 2rem 1.188rem 1.625rem 1.688rem;
@@ -12,131 +11,133 @@
   border: solid 1px #e8e8e8;
   background-color: #fff;
   display: flex;
-  
-
-}
-.general{
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-}
-.percentage{
-    width: 35%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10%;
-}
-.chapter{
-    width: 35%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.styleBookData_1{
-    opacity: 0.5;
-    font-family: 'Roboto Slab', serif;
-    font-size: 0.875rem;
-    font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    color: var(--black-two)
-}
-.styleBookData_2{
-    font-family: 'Roboto Slab', serif;
-    font-size: 1.375rem;
-    font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: -0.2px;
-    color: var(--black-two);
-  
-}
-.styleBookData_3{
-    font-family: 'Roboto Slab', serif;
-    font-size: 0.875rem;
-    font-weight: 300;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    color: #4386bf;
-  
 }
 
-.buttonsHeader{
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    font-size: .6em;
-}
-.generalData{
-    height: 41%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-}
-.buttons{
-    margin-left: -2%;
-}
-.chapter{
-    display: flex;
-    flex-direction: column;
-}
-.cChapter{
-    font-family: 'Roboto Slab', serif;
-    font-size: 0.813rem;
-    font-weight: 300;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    color: var(--black-two);
-}
-.cap{
-    font-size: 1rem;
-    font-weight: 300;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: -0.4px;
-    color: var(--black-two);
-}
-.chapterButton{
-    padding: 0.438rem 1.188rem 0.5rem 1.375rem;
-    border-radius: 3px;
-    background-color: #0290ff;
-    border: 0;
-    height: 23px;
-    width: 120px;
-    font-family: 'Roboto Slab', serif;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: 0.5px;
-    margin-top: 8%;
-    text-align: center;
-    color: #fff;
-    font-size: .4em;
+.general {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
-.percentageVal{
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2rem;
-    font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    color: var(--black-two);
+.percentage {
+  width: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10%;
 }
-.percentageText{
-    opacity: 0.5;
 
+.chapter {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+}
+
+.styleBookData_1 {
+  opacity: 0.5;
+  font-family: 'Roboto Slab', serif;
+  font-size: 0.875rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--black-two);
+}
+
+.styleBookData_2 {
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.375rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.2px;
+  color: var(--black-two);
+}
+
+.styleBookData_3 {
+  font-family: 'Roboto Slab', serif;
+  font-size: 0.875rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
+}
+
+.buttonsHeader {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 0.6em;
+}
+
+.generalData {
+  height: 41%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.buttons {
+  margin-left: -2%;
+}
+
+.cChapter {
+  font-family: 'Roboto Slab', serif;
+  font-size: 0.813rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--black-two);
+}
+
+.cap {
+  font-size: 1rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.4px;
+  color: var(--black-two);
+}
+
+.chapterButton {
+  padding: 0.438rem 1.188rem 0.5rem 1.375rem;
+  border-radius: 3px;
+  background-color: #0290ff;
+  border: 0;
+  height: 23px;
+  width: 120px;
+  font-family: 'Roboto Slab', serif;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  margin-top: 8%;
+  text-align: center;
+  color: #fff;
+  font-size: 0.4em;
+}
+
+.percentageVal {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--black-two);
+}
+
+.percentageText {
+  opacity: 0.5;
   font-family: 'Montserrat', sans-serif;
   font-size: 0.875rem;
   font-weight: normal;

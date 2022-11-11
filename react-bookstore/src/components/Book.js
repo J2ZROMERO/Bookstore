@@ -1,12 +1,9 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import './Book.css';
 import progress from '../media/progress.png';
 
 export default class Book extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     const { title, author } = this.props.book;
 
