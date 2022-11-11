@@ -14,7 +14,6 @@
   gap: 20%;
   padding: 0;
   align-items: center;
-  width: 100%;
 }
 
 [class^="child"] > * {
