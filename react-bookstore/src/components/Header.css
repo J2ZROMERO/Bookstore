@@ -1,0 +1,28 @@
+.head {
+    width: 100%;
+    height: 5.938rem;
+    margin: 0 0 2.375rem;
+    padding: 1.438rem 6.188rem 1.688rem 6.25rem;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.listHeader{
+list-style: none;
+display: flex;
+gap: 20%;
+padding: 0;
+}
+.childUl > *{
+text-decoration: none;
+}
+
+.bookCategories{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 65%;
+    padding-left: 5%;
+}

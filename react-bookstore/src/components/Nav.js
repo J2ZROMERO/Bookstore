@@ -14,10 +14,10 @@ const  Nav = () =>{
           },
         ];
         return (
-            <nav>
-            <ul>
+            <nav className='bookCategories'>
+            <ul className='listHeader'>
               {links.map((link) => (
-                <li key={link.id}>
+                <li key={link.id} className='childUl'>
                   <Link to={link.path}>{link.text}</Link>
                 </li>
               ))}

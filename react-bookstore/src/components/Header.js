@@ -1,15 +1,15 @@
 import React from 'react';
 import Nav from './Nav';
-
-
+import './Header.css'
+import user from '../media/user.png'
 
 const Headerelem = () => {
 return (
     <>
-    <header>
+    <header className='head'>
         <h1 className="title">Bookstore CMS</h1>
         <Nav />
-      <h2> icon </h2>
+      <img src={user} width='30px' height='30px'/>
     </header>
  </>   
   
