@@ -1,19 +1,19 @@
-import React from "react";
-import './Book.css'
-import progress from '../media/progress.png'
+import React from 'react';
+import './Book.css';
+import progress from '../media/progress.png';
+
 export default class Book extends React.Component {
-constructor(props){
-super(props)
-}
+  constructor(props) {
+    super(props);
+  }
 
+  render() {
+    const { title, author } = this.props.book;
 
-render (){
-    const { title , author} = this.props.book
-    
     return (
-        
+
    <>
-<section className="contentBook">      
+<section className="contentBook">
         <div className="general">
             <div className="generalData">
             <h1 className="styleBookData_1">Action</h1>
@@ -27,8 +27,6 @@ render (){
             </div>
         </div>
 
-
-    
         <div className="percentage">
             <img src={progress} width='50px' height='50px'/>
             <div className="percentageData">
@@ -44,12 +42,10 @@ render (){
 
 <button type="button" className="chapterButton">UPDATE PROGRESS</button>
             </div>
-    
+
 </section>
 
         </>
-    )
-}
-
-
+    );
+  }
 }
