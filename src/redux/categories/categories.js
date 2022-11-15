@@ -1,19 +1,14 @@
-const STATUS_CHECKED = "STATUS_CHECKED";
+const STATUS_CHECKED = 'STATUS_CHECKED';
 
+const setConfig = (state = [], action = {}) => {
+  switch (action.type) {
+    case STATUS_CHECKED:
+      return 'Under construction';
 
-const setConfig = (state = [],action = {})=>{
-    switch (action.type){
-        case STATUS_CHECKED:
-            return "Under construction"
-        
+    default: return state;
+  }
+};
 
-        default: state;
-    }
+const checkedStatus = () => ({ type: STATUS_CHECKED });
 
-}
-
-const checkedStatus = () =>{
-    return {type: STATUS_CHECKED}
-}
-
-export default {setConfig,checkedStatus};
+export default { setConfig, checkedStatus };
