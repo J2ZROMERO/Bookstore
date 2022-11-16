@@ -1,11 +1,13 @@
-import { combineReducers, configureStore } from '@reduxjs/toolkit';
-import AddRemoBook from './books/books';
+import { configureStore } from '@reduxjs/toolkit';
+import { AddRemoBook } from './books/books';
 import setConfig from './categories/categories';
 
-const rootReducer = combineReducers({
-  books: AddRemoBook,
-  setcnf: setConfig,
-});
+// const rootReducer = ;
 
-const store = configureStore(rootReducer);
+const store = configureStore({
+  reducer: {
+    books: AddRemoBook,
+    setcnf: setConfig,
+  },
+});
 export default store;

@@ -1,15 +1,13 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import './Book.css';
-import progress from '../media/progress.png';
+// import progress from '../media/progress.png';
 
 export default class Book extends React.Component {
   render() {
     const { title, author } = this.props.book;
 
     return (
-
-   <>
 <section className="contentBook">
         <div className="general">
             <div className="generalData">
@@ -23,26 +21,25 @@ export default class Book extends React.Component {
             <button className="buttonsHeader">Edit</button>
             </div>
         </div>
-
+{/*
         <div className="percentage">
-            <img src={progress} width='50px' height='50px'/>
-            <div className="percentageData">
-                <h1 className="percentageVal">64%</h1>
-                <h1 className="percentageText">completed</h1>
-            </div>
-            </div>
+        <img src={progress} width='50px' height='50px'/>
+        <div className="percentageData">
+        <h1 className="percentageVal">64%</h1>
+        <h1 className="percentageText">completed</h1>
+        </div>
+        </div>
         <div className="chapter">
-            <div className="chapterData">
-<h1 className="cChapter">CURRENT CHAPTER</h1>
-<h1 className="cap">Chapter 17</h1>
+        <div className="chapterData">
+        <h1 className="cChapter">CURRENT CHAPTER</h1>
+        <h1 className="cap">Chapter 17</h1>
             </div>
 
-<button type="button" className="chapterButton">UPDATE PROGRESS</button>
-            </div>
+            <button type="button" className="chapterButton">UPDATE PROGRESS</button>
+          </div> */}
 
 </section>
 
-        </>
     );
   }
 }
