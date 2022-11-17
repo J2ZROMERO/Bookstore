@@ -1,13 +1,13 @@
 import React from 'react';
 import Nav from './Nav';
 import './Header.css';
-import user from '../media/user.png';
+// import user from '../media/user.png';
 
 const Headerelem = () => (
     <>
     <header className='head'>
         <Nav />
-      <img src={user} width='30px' height='30px'/>
+      <img width='30px' height='30px'/>
     </header>
  </>
 

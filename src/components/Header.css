@@ -18,7 +18,7 @@
 }
 
 [class^="child"] > * {
-  text-decoration: none;
+  /* text-decoration: none; */
   color: black;
 }
 
@@ -30,7 +30,8 @@
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
-  color: #0290ff;
+
+  /* color: #0290ff; */
 }
 
 .bookCategories {
