@@ -10,7 +10,7 @@ const AddRemoBook = (state = newBooks, action = {}) => {
   switch (action.type) {
     case ADDED_BOOK:
       console.log(newBooks);
-      return [...state, { id: newBooks.length + 1, title: 'asdasda', author: 'action.author' }];
+      return [...state, { id: action.id, title: action.title, author: action.author }];
 
     case REMOVED_BOOK:
       return produce(state, () => {
@@ -20,7 +20,9 @@ const AddRemoBook = (state = newBooks, action = {}) => {
     default: return state;
   }
 };
-const addBK = () => ({ type: ADDED_BOOK });
+const addBK = (payload) => ({
+  type: ADDED_BOOK, id: payload.id, title: payload.title, author: payload.author,
+});
 
 const removeBK = () => ({ type: REMOVED_BOOK });
 
