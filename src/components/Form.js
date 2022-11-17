@@ -6,7 +6,6 @@ import { addBK } from '../redux/books/books';
 
 const Form = () => {
   const dataBook = useSelector((state) => state.books);
-  console.log(dataBook.length);
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
   const titleInput = (e) => { setTitle(e.target.value); };
@@ -21,9 +20,11 @@ const Form = () => {
 
   <button className="addBook" onClick={(e) => {
     e.preventDefault();
-    store.dispatch(addBK({ id: dataBook.length + 1, title, author }));
-    setAuthor('');
-    setTitle('');
+    if (title !== '' && author !== '') {
+      store.dispatch(addBK({ id: dataBook.length + 1, title, author }));
+      setAuthor('');
+      setTitle('');
+    }
   }}>ADD BOOK</button>
         </form>
         </>);
