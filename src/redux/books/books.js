@@ -1,6 +1,5 @@
 const ADDED_BOOK = 'ADDED_BOOK';
 const REMOVED_BOOK = 'REMOVED_BOOK';
-// const { produce } = require('immer');
 
 const newBooks = [
   {

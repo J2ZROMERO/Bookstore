@@ -10,7 +10,14 @@ const Form = () => {
   const [author, setAuthor] = useState('');
   const titleInput = (e) => { setTitle(e.target.value); };
   const authorInput = (e) => { setAuthor(e.target.value); };
-
+  const addBookButton = (e) => {
+    e.preventDefault();
+    if (title !== '' && author !== '') {
+      store.dispatch(addBK({ id: dataBook.length + 1, title, author }));
+      setAuthor('');
+      setTitle('');
+    }
+  };
   return (
       <>
       <form className="form">
@@ -18,14 +25,7 @@ const Form = () => {
     <input type='text' onInput={ titleInput } className="inputBook" placeholder="Title" value={title}></input>
     <input type='text' onInput={ authorInput } className="inputAuthor" placeholder="Author" value={author}></input>
 
-  <button className="addBook" onClick={(e) => {
-    e.preventDefault();
-    if (title !== '' && author !== '') {
-      store.dispatch(addBK({ id: dataBook.length + 1, title, author }));
-      setAuthor('');
-      setTitle('');
-    }
-  }}>ADD BOOK</button>
+  <button className="addBook" onClick={addBookButton}>ADD BOOK</button>
         </form>
         </>);
 };
