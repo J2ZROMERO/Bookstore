@@ -9,9 +9,9 @@ const newBooks = [
 const AddRemoBook = (state = newBooks, action = {}) => {
   switch (action.type) {
     case ADDED_BOOK:
-      return produce(state, () => {
-        state.push({ id: 3, title: ' Fly ', author: 'Carl Brend' });
-      });
+      console.log(newBooks);
+      return [...state, { id: newBooks.length + 1, title: 'asdasda', author: 'action.author' }];
+
     case REMOVED_BOOK:
       return produce(state, () => {
         state.length -= 1;
@@ -20,8 +20,8 @@ const AddRemoBook = (state = newBooks, action = {}) => {
     default: return state;
   }
 };
-const addB = () => ({ type: ADDED_BOOK });
+const addBK = () => ({ type: ADDED_BOOK });
 
-const removeB = () => ({ type: REMOVED_BOOK });
+const removeBK = () => ({ type: REMOVED_BOOK });
 
-export { AddRemoBook, addB, removeB };
+export { AddRemoBook, addBK, removeBK };

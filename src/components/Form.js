@@ -1,5 +1,7 @@
 import React from 'react';
 import './Form.css';
+import store from '../redux/configureStore';
+import { addBK } from '../redux/books/books';
 
 const Form = () => (
 
@@ -8,7 +10,11 @@ const Form = () => (
     <input type='text' className="inputBook" placeholder="Title"></input>
     <input type='text' className="inputAuthor" placeholder="Author"></input>
 
-  <button className="addBook">ADD BOOK</button>
+  <button className="addBook" onClick={(e) => {
+    e.preventDefault();
+    store.dispatch(addBK());
+    console.log('asdasd');
+  }}>ADD BOOK</button>
         </form>
 );
 
