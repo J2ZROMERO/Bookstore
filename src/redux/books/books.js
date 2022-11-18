@@ -1,29 +1,40 @@
+import axios from 'axios';
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+
+const initialState = [];
+console.log(axios, createAsyncThunk, createSlice, initialState);
 const ADDED_BOOK = 'ADDED_BOOK';
-const REMOVED_BOOK = 'REMOVED_BOOK';
 
-const newBooks = [
-  {
-    id: 1, title: ' Three little pigs', author: 'Steave Royal', status: 'Sold',
-  },
-  {
-    id: 2, title: ' Fly ', author: 'Carl Brend', status: 'Sold',
-  }];
+const AddRemoBook = createAsyncThunk('books/fetchBooks', () => axios.get('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/fVmzz756dK4s0HdKrZVY/books')
+  .then((response) => {
+    const books = response.data;
+    const data = Object.keys(books).map((id) => ({
+      id: Number(id),
+      title: books[id][0].title,
+      author: books[id][0].author,
+      category: books[id][0].category,
+    }));
+    return data;
+  }));
 
-const AddRemoBook = (state = newBooks, action = {}) => {
-  switch (action.type) {
-    case ADDED_BOOK:
-      return [...state, { id: action.id, title: action.title, author: action.author }];
-
-    case REMOVED_BOOK:
-      return state.filter((book) => book.id !== parseInt(action.id, 10));
-
-    default: return state;
-  }
-};
-const addBK = (payload) => ({
-  type: ADDED_BOOK, id: payload.id, title: payload.title, author: payload.author,
+const addBK = createAsyncThunk('books/addBooks', (book) => {
+  axios.post('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/fVmzz756dK4s0HdKrZVY/books', book)
+    .then((response) => response.status).then((data) => data);
 });
 
-const removeBK = (payload) => ({ id: payload.id, type: REMOVED_BOOK });
+const removeBK = createAsyncThunk(ADDED_BOOK, (id) => {
+  axios.delete(`https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/fVmzz756dK4s0HdKrZVY/books/${id}`)
+    .then((response) => response.data);
+});
 
-export { AddRemoBook, addBK, removeBK };
+const booksSlice = createSlice({
+  name: 'books',
+  initialState,
+  extraReducers: (builder) => {
+    builder.addCase(AddRemoBook.fulfilled, (state, action) => action.payload);
+  },
+});
+
+export {
+  AddRemoBook, addBK, removeBK, booksSlice,
+};
