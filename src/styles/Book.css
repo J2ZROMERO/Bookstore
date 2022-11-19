@@ -17,7 +17,7 @@
   width: 50%;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 
 .percentage {
@@ -25,13 +25,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10%;
+  gap: 2%;
 }
 
 .chapter {
   width: 35%;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .styleBookData_1 {
@@ -72,7 +74,8 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
-  font-size: 0.6em;
+  color: #4386bf;
+  font-size: 0.875rem;
 }
 
 .generalData {
@@ -94,7 +97,7 @@
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
-  color: var(--black-two);
+  color: #888;
 }
 
 .cap {
@@ -105,6 +108,7 @@
   line-height: normal;
   letter-spacing: -0.4px;
   color: var(--black-two);
+  margin-top: 5%;
 }
 
 .chapterButton {

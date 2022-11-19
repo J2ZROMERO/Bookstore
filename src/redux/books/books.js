@@ -7,9 +7,7 @@ const GET_BOOKS = 'book-keeper/src/redux/books/getBooks';
 
 const initialState = [];
 
-const apiUrl = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/XDhvzbODki55gl1Z9Sht/books/';
-
-// action creators for add and remove books
+const apiUrl = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/aU0LTslNaYlS1BCACa68/books/';
 
 export const addBK = createAsyncThunk(ADD_BOOK, (payload) => {
   axios.post(`${apiUrl}`, {

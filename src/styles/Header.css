@@ -2,36 +2,37 @@
   width: 100%;
   height: 5.938rem;
   margin: 0 0 2.375rem;
-  padding: 1.438rem 6.188rem 1.688rem 6.25rem;
+  padding: 1.438rem 3.188rem 0.688rem 0.25rem;
   background-color: #fff;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .listHeader {
   list-style: none;
   display: flex;
-  gap: 20%;
+  gap: 10%;
   padding: 0;
   align-items: center;
   width: 100%;
+  font-family: 'Montserrat', sans-serif;
 }
 
 [class^="child"] > * {
-  /* text-decoration: none; */
+  text-decoration: none;
   color: black;
 }
 
 .child1 > a {
   font-family: 'Montserrat', sans-serif;
-  font-size: 1.875rem;
-  font-weight: 600;
+  font-size: 1.3rem;
+  font-weight: 700;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
-
-  /* color: #0290ff; */
+  color: #0290ff;
 }
 
 .bookCategories {

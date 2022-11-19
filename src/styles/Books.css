@@ -1,4 +1,4 @@
-/* @import '../generalstyles.css'; */
+@import '../styles/generalstyles.css';
 
 * {
   margin: 0;
@@ -6,12 +6,12 @@
 
 #root {
   width: 100%;
-  margin: 0 2.5rem 4.063rem 0;
   border-radius: 4px;
   box-shadow: 0 0 60px 0 var(--black-5);
-  background-color: var(--fff);
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 1% 1% 8% 1%;
 }
