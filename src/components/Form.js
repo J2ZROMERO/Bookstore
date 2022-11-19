@@ -1,7 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { React, useState } from 'react';
-import './Form.css';
-// import store from '../redux/configureStore';
+import '../styles/Form.css';
 import { addBK, getBooks } from '../redux/books/books';
 
 const Form = () => {
@@ -13,16 +12,17 @@ const Form = () => {
   const authorInput = (e) => { setAuthor(e.target.value); };
   const categoryInput = (e) => { setCategory(e.target.value); };
   const dispatch = useDispatch();
+
   const addBookButton = (e) => {
     e.preventDefault();
 
     if (title !== '' && author !== '') {
-      // store.dispatch(addBK({ id: dataBook.length + 1, title, author }));
       dispatch(addBK({
         id: dataBook.length + 1, title, author, category,
       }));
       setAuthor('');
       setTitle('');
+      setCategory('');
       setTimeout(() => dispatch(getBooks()), 1000);
     }
   };
@@ -32,8 +32,16 @@ const Form = () => {
 
     <input type='text' onInput={ titleInput } className="inputBook" placeholder="Title" value={title}></input>
     <input type='text' onInput={ authorInput } className="inputAuthor" placeholder="Author" value={author}></input>
-    <input type='text' onInput={ categoryInput } className="inputAuthor" placeholder="category" value={category}></input>
-
+    <select className="inputAuthor" onInput={ categoryInput } required>
+            <option value="" hidden>Category</option>
+            <option value="Action">Action</option>
+            <option value="Suspense">Suspense</option>
+            <option value="Romance">Romance</option>
+            <option value="Comedy">Comedy</option>
+            <option value="Thriller">Thriller</option>
+            <option value="Fiction">Fiction</option>
+            <option value="Real Life">Real Life</option>
+          </select>
   <button className="addBook" onClick={addBookButton}>ADD BOOK</button>
         </form>
         </>);

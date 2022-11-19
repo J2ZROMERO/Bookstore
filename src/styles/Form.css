@@ -1,6 +1,6 @@
 
-/* @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
 
 .form {
   width: 80%;
@@ -10,7 +10,7 @@
   flex-wrap: wrap;
 }
 
-/* .addBook {
+.addBook {
   background-color: #0290ff;
   border: 0;
   width: 103px;
@@ -23,11 +23,11 @@
   line-height: normal;
   letter-spacing: 0.5px;
   text-align: center;
-  border-radius: 8px;
+  border-radius: 3px;
   color: #fff;
-} */
+}
 
-/* .addNbook {
+.addNbook {
   width: 100%;
   height: 1.5rem;
   font-family: 'Montserrat', sans-serif;
@@ -38,12 +38,16 @@
   line-height: normal;
   letter-spacing: -0.18px;
   color: #888;
-} */
+}
 
 .inputBook {
-  width: 50%;
+  width: 35%;
 }
 
 .select {
   width: 35%;
+}
+
+.inputAuthor{
+  width: 20%;
 }

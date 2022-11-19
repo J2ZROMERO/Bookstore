@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import './Book.css';
-// import progress from '../media/progress.png';
+import '../styles/Book.css';
+import progress from '../media/progress.png';
 // import { useDispatch } from 'react-redux';
 import { removeBK, getBooks } from '../redux/books/books';
 // import { removeBK } from '../redux/books/books';
@@ -42,7 +42,7 @@ export default class Book extends React.Component {
             <button className="buttonsHeader">Edit</button>
             </div>
         </div>
-{/*
+
         <div className="percentage">
         <img src={progress} width='50px' height='50px'/>
         <div className="percentageData">
@@ -57,7 +57,7 @@ export default class Book extends React.Component {
             </div>
 
             <button type="button" className="chapterButton">UPDATE PROGRESS</button>
-          </div> */}
+          </div>
 
 </section>
 
