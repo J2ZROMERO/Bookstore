@@ -1,12 +1,18 @@
 import './Books.css';
-import { useSelector } from 'react-redux';
-import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import React, { useEffect } from 'react';
 import Book from '../components/Book';
 import Headerelem from '../components/Header';
 import Form from '../components/Form';
+import { getBooks } from '../redux/books/books';
 
 const Books = () => {
   const dataBook = useSelector((state) => state.books);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getBooks());
+  }, [dispatch]);
+
   return (
     <>
     <Headerelem />

@@ -2,7 +2,9 @@
 import React from 'react';
 import './Book.css';
 // import progress from '../media/progress.png';
-import { removeBK } from '../redux/books/books';
+// import { useDispatch } from 'react-redux';
+import { removeBK, getBooks } from '../redux/books/books';
+// import { removeBK } from '../redux/books/books';
 import store from '../redux/configureStore';
 
 export default class Book extends React.Component {
@@ -18,19 +20,19 @@ export default class Book extends React.Component {
   render() {
     const removeElem = (e) => {
       const idVal = e.target.parentElement.parentElement.parentElement.id;
-      this.setIDR(idVal);
-      console.log(this.idR.id);
-      store.dispatch(removeBK({ id: this.idR.id }));
+      store.dispatch(removeBK(idVal));
+      setTimeout(() => store.dispatch(getBooks()), 1000);
     };
-
-    const { id, title, author } = this.props.book;
+    const {
+      category, id, title, author,
+    } = this.props.book;
 
     return (
 
 <section className="contentBook" id={id}>
         <div className="general">
             <div className="generalData">
-            <h1 className="styleBookData_1">Action</h1>
+            <h1 className="styleBookData_1">{category}</h1>
             <h1 className="styleBookData_2">{title}</h1>
             <h1 className="styleBookData_3">{author}</h1>
             </div>
