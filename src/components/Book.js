@@ -1,7 +1,9 @@
 /* eslint-disable react/prop-types */
+import { CircularProgressbar } from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
 import React from 'react';
 import '../styles/Book.css';
-import progress from '../media/progress.png';
+// import progress from '../media/progress.png';
 // import { useDispatch } from 'react-redux';
 import { removeBK, getBooks } from '../redux/books/books';
 // import { removeBK } from '../redux/books/books';
@@ -26,7 +28,7 @@ export default class Book extends React.Component {
     const {
       category, id, title, author,
     } = this.props.book;
-
+    const percentage = 64;
     return (
 
 <section className="contentBook" id={id}>
@@ -44,7 +46,7 @@ export default class Book extends React.Component {
         </div>
 
         <div className="percentage">
-        <img src={progress} width='50px' height='50px'/>
+        <CircularProgressbar className='percentage' value={percentage} text={`${percentage}%`} />;
         <div className="percentageData">
         <h1 className="percentageVal">64%</h1>
         <h1 className="percentageText">completed</h1>

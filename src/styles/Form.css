@@ -6,8 +6,9 @@
   width: 80%;
   display: flex;
   justify-content: space-between;
-  margin-top: 8%;
+  margin-top: 2%;
   flex-wrap: wrap;
+  gap: 19px;
 }
 
 .addBook {

@@ -9,8 +9,6 @@ const initialState = [];
 
 const apiUrl = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/aU0LTslNaYlS1BCACa68/books/';
 
-// action creators for add and remove books
-
 export const addBK = createAsyncThunk(ADD_BOOK, (payload) => {
   axios.post(`${apiUrl}`, {
     item_id: payload.id,

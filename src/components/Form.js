@@ -29,6 +29,7 @@ const Form = () => {
   return (
       <>
       <form className="form">
+<h1 className='addNbook'>ADD NEW BOOK</h1>
 
     <input type='text' onInput={ titleInput } className="inputBook" placeholder="Title" value={title}></input>
     <input type='text' onInput={ authorInput } className="inputAuthor" placeholder="Author" value={author}></input>
