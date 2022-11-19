@@ -8,7 +8,6 @@ import { getBooks } from '../redux/books/books';
 
 const Books = () => {
   const dataBook = useSelector((state) => state.books);
-  console.log(dataBook);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getBooks());
