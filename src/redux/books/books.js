@@ -1,40 +1,59 @@
 import axios from 'axios';
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
-const initialState = [];
-console.log(axios, createAsyncThunk, createSlice, initialState);
-const ADDED_BOOK = 'ADDED_BOOK';
+const ADD_BOOK = 'book-keeper/src/redux/books/addBook';
+const REMOVE_BOOK = 'book-keeper/src/redux/books/removeBook';
+const GET_BOOKS = 'book-keeper/src/redux/books/getBooks';
 
-const AddRemoBook = createAsyncThunk('books/fetchBooks', () => axios.get('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/fVmzz756dK4s0HdKrZVY/books')
-  .then((response) => {
-    const books = response.data;
+const initialState = [];
+
+const apiUrl = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/DFUhh4yDST6avyyeS4xx/books/';
+
+// action creators for add and remove books
+
+export const addBK = createAsyncThunk(ADD_BOOK, (payload) => {
+  axios.post(`${apiUrl}`, {
+    item_id: payload.id,
+    title: payload.title,
+    author: payload.author,
+    category: payload.genre,
+  })
+    .then((response) => (response.data));
+});
+
+export const removeBK = createAsyncThunk(REMOVE_BOOK, (id) => {
+  axios.delete(`${apiUrl}${id}`)
+    .then((response) => (response.data));
+});
+
+export const getBooks = createAsyncThunk(
+  GET_BOOKS, () => axios.get(apiUrl).then((res) => {
+    const books = res.data;
+    const progress = Math.floor(Math.random() * 100);
+    const currentStatus = Math.floor(Math.random() * 10);
     const data = Object.keys(books).map((id) => ({
-      id: Number(id),
+      id,
       title: books[id][0].title,
       author: books[id][0].author,
       category: books[id][0].category,
+      progress: `${progress}`,
+      currentStatus: `${currentStatus}`,
     }));
     return data;
-  }));
-
-const addBK = createAsyncThunk('books/addBooks', (book) => {
-  axios.post('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/fVmzz756dK4s0HdKrZVY/books', book)
-    .then((response) => response.status).then((data) => data);
-});
-
-const removeBK = createAsyncThunk(ADDED_BOOK, (id) => {
-  axios.delete(`https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/fVmzz756dK4s0HdKrZVY/books/${id}`)
-    .then((response) => response.data);
-});
+  }),
+);
 
 const booksSlice = createSlice({
   name: 'books',
   initialState,
   extraReducers: (builder) => {
-    builder.addCase(AddRemoBook.fulfilled, (state, action) => action.payload);
+    builder.addCase(getBooks.fulfilled, (_, action) => action.payload);
+    builder.addCase(getBooks.rejected, (state) => {
+      const newState = state;
+      newState.status = 'failed';
+    });
+    builder.addCase(getBooks.pending, (_, action) => action.payload);
   },
 });
 
-export {
-  AddRemoBook, addBK, removeBK, booksSlice,
-};
+export default booksSlice.reducer;
